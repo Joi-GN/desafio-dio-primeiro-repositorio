@@ -21,3 +21,4 @@ Markdown é uma linguagem simples de marcação que pode ser convertida para HTM
 #### Links Úteis
 - [In-Browser Markdown editor](https://stackedit.io/app)
 - [Sintaxe básica do Markdown](https://www.markdownguide.org/basic-syntax/)
+- [Essenciais para escrita com Markdown - tabelas, notas](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=pt-BR)
