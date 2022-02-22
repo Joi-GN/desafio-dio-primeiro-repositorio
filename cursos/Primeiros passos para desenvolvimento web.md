@@ -40,3 +40,38 @@ Hardware que converte dados em um formato que possa ser transmitido de um comput
 #### ROTEADOR
 Distribui internet para varios dispositivos; comunicação entre redes;
 
+#### Web Server
+
+|Estático| Dinâmico|
+|-|-|
+|Servidor físico armazenam arquivos, softwares e/ou banco de dados| Softwares que estão presentes no servidor físico
+
+- [O que é um servidor web (web server)?](https://developer.mozilla.org/pt-BR/docs/Learn/Common_questions/What_is_a_web_server)
+
+#### Stacks
+- Front-end
+
+"Parte da frente"
+
+Site, Software, App, Web Service
+
+Interface, UI (user interface), UX (user experience)
+
+Lógica de programação, HTML, CSS, jQuery/JS/AJAX, PHP, Bootstrap/outros frameworks
+
+- Back-end
+
+"Parte de trás"
+
+Servidores, Banco de dados
+
+"meio-de-campo" entre interface e bancos de dados, regra de negócios, validações
+
+MySQL, Oracle, protocolos de comunicação, PHP, Java, node.js
+
+- Full-stack
+
+Profissional que sabe trabalhar em todas as camadas das tecnologias de desenvolvimento/execução de um app/software
+
+#### Links Úteis
+- [Aprendendo desenvolvimento web](https://developer.mozilla.org/pt-BR/docs/Learn)
