@@ -34,6 +34,13 @@ Protocolos de comunicação entre computadores em rede
 |443: HTTPS |(Requisição segura da internet)|
 |3306: MySQL |
 
+> FTP, SSH, HTTP, HTTPS,POP3 e IMAP:   
+>Exemplos de protocolos de comunicação entre cliente e servidor.
+
+### Segurança em redes
+WEP2: Mais segura e indicada; tem maior custo computacional porém levando em conta o poder computacional atual, o maior custo se torna irrelevante;  
+- [WEP, WPA, WPA2](https://www.tecmundo.com.br/wi-fi/42024-wep-wpa-wpa2-o-que-as-siglas-significam-para-o-seu-wifi-.htm)
+
 >### MODEM (modulator-demodulator)
 >>Hardware que converte dados em um formato que possa ser transmitido de um computador para outro
 
@@ -44,14 +51,27 @@ Protocolos de comunicação entre computadores em rede
 
 |Estático| Dinâmico|
 |-|-|
-|Servidor físico armazenam arquivos, softwares e/ou banco de dados| Softwares que estão presentes no servidor físico
+|Servidor físico | Servidor físico com softwares
+Armazenam arquivos, softwares e/ou banco de dados | Arquivos (file server), Aplicações (application server), Banco de dados (database)
+Servidor envia seus arquivos tal como foram criados e armazenados (hospedados) ao navegador | Servidor de aplicações atualiza os arquivos hospedados antes de enviá-los ao navegador através do servidor HTTP
 
 - [O que é um servidor web (web server)?](https://developer.mozilla.org/pt-BR/docs/Learn/Common_questions/What_is_a_web_server)
+
+>### localhost
+>localização do sistema que está sendo usado
+>> 127.0.0.1
+
+### Programação Web
+Por definição, um servidor web sempre procura uma página chamada "index", se nenhuma for definida.
+
+>Podem ser utilizados na programação web:  
+>HTML, CSS, JavaScript, C++,C#, PHP
 
 ### Stacks
 >- Front-end  
 >>"Parte da frente"  
-Site, Software, App, Web Service    Interface, UI (user interface), UX (user experience)  
+Site, Software, App, Web Service    
+Interface, UI (user interface), UX (user experience)  
 Lógica de programação, HTML, CSS, jQuery/JS/AJAX, PHP, Bootstrap/outros frameworks  
 
 >- Back-end  

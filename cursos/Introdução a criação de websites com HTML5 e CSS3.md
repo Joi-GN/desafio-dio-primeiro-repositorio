@@ -20,6 +20,10 @@ A tag html é a raiz do seu documento, todos os elementos HTML devem estar dentr
 **< head >**
 A tag head contém elementos que serão lidos pelo navegador, como os metadados - um exemplo é o charset, que é a codificação de caracteres e a mais comum é a UTF-8, o JavaScript com a tag script, o CSS através das tags style e link.
 
+>! OBS  
+>"charset="UTF-8""  
+> Para aceitar caracteres acentuados
+
 **< body >**
 E dentro da tag body colocamos todo o conteúdo visível ao usuário: textos, imagens, vídeos.
 
@@ -97,7 +101,7 @@ O CSS descreve como elementos são mostrados na tela, no papel, na fala ou em ou
 
 - [CSS Básico - MDN Web Docs](https://developer.mozilla.org/pt-BR/docs/Learn/Getting_started_with_the_web/CSS_basics)  
 
-Uma regra CSS é representada por um seletor ou um grupo de seletores, no caso acima é o < p >, então dentro de um par de chaves adicionamos as declarações, no exemplo acima estamos alterando cor para vermelho. Podemos colocar vários seletores em uma regra separando-os por vírgula.
+Uma regra CSS é representada por um seletor ou um grupo de seletores, no caso acima é o < p >, então dentro de um par de chaves adicionamos as declarações (formadas por uma propriedade e um valor), no exemplo acima estamos alterando cor para vermelho. Podemos colocar vários seletores em uma regra separando-os por vírgula.
 
 >Cada linha de comando deve ser envolvida em chaves ({}).
 >>Dentro de cada declaração, você deve usar dois pontos (:) para separar a propriedade de seus valores.
@@ -136,6 +140,7 @@ Com o font-family podemos alterar a fonte dos nossos textos, como uma fonte da i
 Essas fontes são chamadas assim pois são encontradas em quases todos os sistemas e podem ser usadas sem preocupação. 
 
  - [**Web safe fonts**](https://www.w3schools.com/cssref/css_websafe_fonts.asp)
+ - [**Google Fonts**](https://fonts.google.com)
 
 **font-size**  
 O font-size nos ajuda a mudar o tamanho do texto.
@@ -154,8 +159,46 @@ O estilo é representada por palavras-chave, vamos ver algumas delas:
 > 2. dotted: são bolinhas com um pequeno espaçamento entre elas;
 >3. dashed: forma uma linha tracejada.
 
-Border-radius  
+**Border-radius**  
 Permite arredondar os cantos de um elemento.  
 Podemos usar várias unidades, mas as mais comuns são os pixels e a porcentagem.  
 Colocar 50% na porcentagem, torna a borda redonda.
+
+### Links Úteis
+- [The box model - display types, box, margins, padding, and borders](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
+- [Backgrounds, borders](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+- [Handling different text directions](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+- [Overflowing content](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
+- [CSS values and units](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [Sizing itens in CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+- [Images, media, and form elements](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+- [Styling tables](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Styling_tables)
+
+
+- WEBKITS
+
+##### CSS Reset  
+Técnica de padronizar a estilização para que não tenha diferença entre navegadores
+
+*{  //no arquivo do css, o asterisco representa todo o documento que está sendo redenrizado;
+	margin:
+	padding:
+	box-sizing: border-box; //o limite é a borda da caixa, os elementos não vao passar dela;
+}
+
+##### Variáveis no CSS
+pode-se criar variaveis no arquivo do css3;  
+define a variavel dentro do elemento root(raiz) do documento;
+
+:root{
+	--variavel:
+
+- [Utilizando Variáveis no CSS - MDN Web Docs](https://developer.mozilla.org/pt-BR/docs/Web/CSS/Using_CSS_custom_properties)
+> - [FontAwesome](fontawesome.com)  
+script que pode-se incorporar no html e utiliza icons nas tags
+
+>- [Owl Carousel 2](https://owlcarousel2.github.io/OwlCarousel2/)  
+plug-in jQuery que permite criar carroseis deslizantes responsivos
+
+>- [CSS Gradient](https://cssgradient.io)
 
