@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+
+        *{
+            box-sizing: border-box;
+        }
+
+        .material-apoio{
+            border: black 2px solid;
+            text-align: center;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        .material-apoio a{
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+        }
+
+        button{
+            border-radius: 10px;
+            padding: 5px;
+            border: none;
+            background-color: pink;
+        }
+
+        button:hover{
+            color: pink;
+            background-color: palevioletred;
+        }
+
+        .main{
+            font-size: 60px;
+            text-align: center;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        h2{
+            text-align: start;
+        }
+
+        p{
+            text-align: start;
+        }
+
+        .divs {
+            border: black solid 2px;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        .div-direction {
+            height: 650px;
+        }
+
+        .flex {
+            max-width: 300px;
+            padding: 10px;
+            border: 2px solid black;
+            display: flex;
+        }
+
+        .item {
+            background-color: aqua;
+            margin: 5px;
+        }
+
+        /*flex direction*/
+
+        .flex-container {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            list-style: none;
+        }
+
+        .flex-item {
+            background: blue;
+            height: 50px;
+            width: 50px;
+            line-height: 50px;
+            font-size: 20px;
+            color: white;
+            text-align: center;
+            margin: 5px;
+        }
+
+        .row {
+            flex-direction: row;
+        }
+
+        .row-reverse {
+            flex-direction: row-reverse;
+        }
+
+        .row-reverse li {
+            background-color: red;
+        }
+
+        .column {
+            float: left;
+            flex-direction: column;
+        }
+
+        .column li {
+            background: orange;
+        }
+
+        .column-reverse {
+            float: right;
+            flex-direction: column-reverse;
+        }
+
+        .column-reverse li {
+            background: purple;
+        }
+
+        /*flex-wrap*/
+
+        .flex-container-wrap {
+            display: flex;
+            flex-direction: column;
+            height: 150px;
+            border: 2px solid black;
+            max-width: 310px;
+        }
+
+        .item-wrap {
+            font-size: 24px;
+            height: 50%;
+            text-align: center;
+            min-width: 100px;
+            line-height: 50px;
+        }
+
+        .nowrap {
+            flex-wrap: nowrap;
+        }
+
+        .wrap {
+            flex-wrap: wrap;
+        }
+
+        .wrap-reverse {
+            flex-wrap: wrap-reverse;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .green {
+            background-color: lightgreen;
+        }
+
+        .orange {
+            background-color: orangered;
+        }
+
+        /*flex-flow*/
+
+        .flex-container-flow {
+            display: flex;
+            border: 1px solid black;
+            max-width: 500px;
+            margin-bottom: 10px;
+            height: 200px;
+        }
+
+        .default-flow {
+            flex-flow: row nowrap;
+        }
+
+        .wrap-flow {
+            flex-flow: row wrap;
+        }
+
+        .wrap-reverse-flow {
+            flex-flow: column wrap-reverse;
+        }
+
+        .r-nowrap-flow {
+            flex-flow: row-reverse nowrap;
+        }
+
+        .r-wrap-flow {
+            flex-flow: row-reverse wrap;
+        }
+
+        .rr-wrap-flow {
+            flex-flow: column wrap-reverse;
+        }
+
+        .item-flow {
+            background-color: blueviolet;
+            margin: 5px;
+            color: white;
+            text-align: center;
+            width: 100px;
+            height: 50px;
+            line-height: 50px;
+        }
+
+        /*justify-content*/
+
+        .container-just-content {
+            max-width: 400px;
+            border: 1px solid black;
+            margin: 0;
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        .item-just-content {
+            background-color: blueviolet;
+            margin: 5px;
+            text-align: center;
+            color: white;
+        }
+
+        .flex-start-just-content {
+            justify-content: flex-start;
+        }
+
+        .flex-end-just-content {
+            justify-content: flex-end;
+        }
+
+        .center-just-content {
+            justify-content: center;
+        }
+
+        .space-between-just-content {
+            justify-content: space-between;
+        }
+
+        .space-around-just-content {
+            justify-content: space-around;
+        }
+
+        .column-just-content {
+            flex-direction: column;
+            min-height: 200px;
+        }
+
+        /*align-items*/
+        .container-align-items {
+            max-width: 350px;
+            border: 1px solid black;
+            display: flex;
+        }
+
+        .item-align-items {
+            background-color: blueviolet;
+            margin: 5px;
+            color: white;
+            text-align: center;
+            flex: 1;
+        }
+
+        .center-align-items {
+            align-items: center;
+        }
+
+        .stretch-align-items {
+            align-items: stretch;
+        }
+
+        .start-align-items {
+            align-items: flex-start;
+        }
+
+        .end-align-items {
+            align-items: flex-end;
+        }
+
+        .baseline-align-items {
+            align-items: baseline;
+        }
+
+        .column-align-items {
+            flex-direction: column;
+        }
+
+        .central-align-items {
+            height: 400px;
+            justify-content: center;
+        }
+
+        .central-align-items .item-align-items {
+            flex: 0;
+            padding: 20px;
+        }
+
+        /*align-content*/
+
+        .container-align-content {
+            height: 350px;
+            max-width: 300px;
+            display: flex;
+            flex-wrap: wrap;
+            border: 1px solid black;
+        }
+
+        .item-align-content {
+            background-color: orangered;
+            padding: 0 5px;
+            margin: 5px;
+            flex: 1;
+            text-align: center;
+            color: white;
+        }
+
+        .stretch-align-content {
+            align-content: stretch;
+        }
+
+        .center-align-content {
+            align-content: center;
+        }
+
+        .flex-start-align-content {
+            align-content: flex-start;
+        }
+
+        .flex-end-align-content {
+            align-content: flex-end;
+        }
+
+        .space-around-align-content {
+            align-content: space-around;
+        }
+
+        .space-between-align-content {
+            align-content: space-between;
+        }
+
+        /*flex-grow*/
+
+        .flex-container-grow {
+            display: flex;
+            border: 2px solid black;
+            max-width: 300px;
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+
+        .item-grow {
+            background-color: orangered;
+            margin: 5px;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        .fg-0 {
+            flex-grow: 0;
+        }
+
+        .fg-1 {
+            flex-grow: 1;
+        }
+
+        .fg-2 {
+            flex-grow: 2;
+        }
+
+        .fg-3 {
+            flex-grow: 3;
+        }
+
+        /*flex-basis*/
+
+        .flex-container-basis {
+            max-width: 500px;
+            border: 1px solid black;
+            display: flex;
+        }
+
+        .items-basis {
+            background-color: coral;
+            color: white;
+            text-align: center;
+            margin: 5px;
+        }
+
+        .bauto {
+            flex-basis: auto;
+        }
+
+        .b-0 {
+            flex-basis: 0;
+        }
+
+        .w100 {
+            flex-basis: 50px;
+        }
+
+        /*flex-shrink*/
+
+        .flex-container-shrink {
+            display: flex;
+            border: 1px solid black;
+            max-width: 350px;
+            margin-bottom: 10px;
+        }
+
+        .item-shrink {
+            background-color: orangered;
+            font-size: 24px;
+            text-align: center;
+            margin: 5px;
+        }
+
+        .s-1 {
+            flex-shrink: 1;
+        }
+
+        .s-0 {
+            flex-shrink: 0;
+            flex-basis: 200px;
+        }
+
+        .s-2 {
+            flex-shrink: 2;
+            flex-basis: 100px;
+        }
+
+        .s-3 {
+            flex-shrink: 3;
+            flex-basis: 100px;
+        }
+
+        /*flex*/
+        .flex-container-flex {
+            display: flex;
+            border: 1px solid black;
+            max-width: 400px;
+            margin-bottom: 10px;
+        }
+
+        .item-flex {
+            background-color: brown;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            margin: 5PX;
+        }
+
+        .flex-1 {
+            flex: 1;
+            /* grow = 1, shrink = 1, basis = 0 */
+        }
+
+        .largura {
+            width: 200px;
+            /* min-width: 250px; */
+        }
+
+        .flex-2 {
+            flex: 2;
+            /* grow = 2, shrink = 1, basis = 0 */
+        }
+
+        /*order*/
+
+        .flex-container-order {
+            display: flex;
+            max-width: 350px;
+            border: 1px solid black;
+            margin-bottom: 20px;
+        }
+
+        .item-order {
+            flex: 1;
+            background: brown;
+            color: white;
+            text-align: center;
+            font-size: 24px;
+            margin: 5px;
+        }
+
+        .o1 {
+            order: 1;
+        }
+
+        .o2 {
+            order: 2;
+        }
+
+        .o3 {
+            order: 3;
+        }
+
+        .o4 {
+            order: 4;
+        }
+
+        .direction {
+            flex-direction: column;
+        }
+
+        /*align-self*/
+
+        .flex-container-self {
+            max-width: 350px;
+            border: 1px solid;
+            margin-bottom: 10px;
+            display: flex;
+        }
+
+        .align-container {
+            align-items: flex-end;
+        }
+
+        .item-self {
+            background-color: brown;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            margin: 5px;
+        }
+
+        .center-self {
+            align-self: center;
+        }
+
+        .start-self {
+            align-self: flex-start;
+        }
+
+        .end-self {
+            align-self: flex-end;
+        }
+
+        .baseline-self {
+            align-self: baseline;
+        }
+
+        .stretch-self {
+            align-self: stretch;
+        }
+
+        .auto-self {
+            align-self: auto;
+        }
+
+        .direction-self {
+            flex-direction: column;
+        }
+    </style>
+
+    <title>Posicionando elementos com Flexbox em CSS</title>
+</head>
+
+<body>
+    <h1 class="main">Posicionando elementos com Flexbox em CSS</h1>
+
+    <div class="material-apoio">
+        <h1>Material de apoio</h2>
+        <button>
+            <a href="https://drive.google.com/file/d/1cSBnkzCsCaqkbiUssLW7LCVCw5yErRCk/view" target="_blank" rel="noopener noreferrer">Slides</a>
+        </button>
+        <br>
+        <br>
+        <button>
+            <a href="https://gitlab.com/karensantos/project-flexbox-dio" target="_blank" rel="noopener noreferrer">Repositório</a>
+        </button>
+    
+    </div>
+
+    <div class="divs">
+        <h1>Display: Flex</h1>
+        <div class="flex">
+            <div class="item">item 1</div>
+            <div class="item">item 2</div>
+            <div class="item">item 3</div>
+            <div class="item">item 3</div>
+            <div class="item">item 3</div>
+            <div class="item">item 3</div>
+            <div class="item">item 3</div>
+            <div class="item">item 3</div>
+            <div class="item">item 3</div>
+        </div>
+    </div>
+
+    <div class="divs div-direction">
+        <h1>Flex-direction</h1>
+        
+        <ul class="flex-container row">
+            <h2>row</h2>
+            <li class="flex-item">1</li>
+            <li class="flex-item">2</li>
+            <li class="flex-item">3</li>
+            <li class="flex-item">4</li>
+            <li class="flex-item">5</li>
+        </ul>
+    
+        <ul class="flex-container row-reverse">
+            <h2>row-reverse</h2>
+            <li class="flex-item">1</li>
+            <li class="flex-item">2</li>
+            <li class="flex-item">3</li>
+            <li class="flex-item">4</li>
+            <li class="flex-item">5</li>
+        </ul>
+        
+        <ul class="flex-container column">
+            <h2>column</h2>
+            <li class="flex-item">1</li>
+            <li class="flex-item">2</li>
+            <li class="flex-item">3</li>
+            <li class="flex-item">4</li>
+            <li class="flex-item">5</li>
+        </ul>
+        
+        <ul class="flex-container column-reverse">
+            <h2>column-reverse</h2>
+            <li class="flex-item">1</li>
+            <li class="flex-item">2</li>
+            <li class="flex-item">3</li>
+            <li class="flex-item">4</li>
+            <li class="flex-item">5</li>
+        </ul>
+    </div>
+
+    <div class="divs">
+        <h1>Flex-wrap</h1>
+        <h2>no wrap</h2>
+        <div class="flex-container-wrap nowrap">
+            <div class="item-wrap orange">1</div>
+            <div class="item-wrap green">2</div>
+            <div class="item-wrap blue">3</div>
+            <div class="item-wrap orange">4</div>
+        </div>
+
+        <h2>wrap</h2>
+        <div class="flex-container-wrap wrap">
+            <div class="item-wrap green">1</div>
+            <div class="item-wrap blue">2</div>
+            <div class="item-wrap orange">3</div>
+            <div class="item-wrap orange">4</div>
+        </div>
+
+        <h2>wrap reverse</h2>
+        <div class="flex-container-wrap wrap-reverse">
+            <div class="item-wrap green">1</div>
+            <div class="item-wrap blue">2</div>
+            <div class="item-wrap orange">3</div>
+            <div class="item-wrap orange">4</div>
+        </div>
+
+    </div>
+
+    <div class="divs">
+        <h1>Flex-flow</h1>
+        <h2>default: row nowrap</h2>
+        <div class="flex-container-flow default-flow">
+            <div class="item-flow">1</div>
+            <div class="item-flow">2</div>
+            <div class="item-flow">3</div>
+            <div class="item-flow">4</div>
+            <div class="item-flow">5</div>
+        </div>
+
+        <h2>wrap</h2>
+        <div class="flex-container-flow wrap-flow">
+            <div class="item-flow">1</div>
+            <div class="item-flow">2</div>
+            <div class="item-flow">3</div>
+            <div class="item-flow">4</div>
+            <div class="item-flow">5</div>
+            <div class="item-flow">6</div>
+        </div>
+
+        <h2>wrap-reverse</h2>
+        <div class="flex-container-flow wrap-reverse-flow">
+            <div class="item-flow">1</div>
+            <div class="item-flow">2</div>
+            <div class="item-flow">3</div>
+            <div class="item-flow">4</div>
+            <div class="item-flow">5</div>
+            <div class="item-flow">6</div>
+        </div>
+
+        <h2>row-reverse nowrap</h2>
+        <div class="flex-container-flow r-nowrap-flow">
+            <div class="item-flow">1</div>
+            <div class="item-flow">2</div>
+            <div class="item-flow">3</div>
+            <div class="item-flow">4</div>
+            <div class="item-flow">5</div>
+            <div class="item-flow">6</div>
+            <div class="item-flow">7</div>
+        </div>
+
+        <h2>row-reverse wrap</h2>
+        <div class="flex-container-flow r-wrap-flow">
+            <div class="item-flow">1</div>
+            <div class="item-flow">2</div>
+            <div class="item-flow">3</div>
+            <div class="item-flow">4</div>
+            <div class="item-flow">5</div>
+            <div class="item-flow">6</div>
+            <div class="item-flow">7</div>
+        </div>
+
+        <h2>row-reverse wrap-reverse</h2>
+        <div class="flex-container-flow rr-wrap-flow">
+            <div class="item-flow">1</div>
+            <div class="item-flow">2</div>
+            <div class="item-flow">3</div>
+            <div class="item-flow">4</div>
+            <div class="item-flow">5</div>
+            <div class="item-flow">6</div>
+            <div class="item-flow">7</div>
+        </div>
+    </div>
+
+    <div class="divs">
+        <h1>Justify content</h1>
+        <h2>row</h2>
+        <p>flex-start</p>
+        <section class="container-just-content flex-start-just-content">
+            <div class="item-just-content">1</div>
+            <div class="item-just-content">item 2</div>
+            <div class="item-just-content">outro item</div>
+        </section>
+
+        <p>flex-end</p>
+        <section class="container-just-content flex-end-just-content">
+            <div class="item-just-content">1</div>
+            <div class="item-just-content">item 2</div>
+            <div class="item-just-content">outro item</div>
+        </section>
+
+        <p>center</p>
+        <section class="container-just-content center-just-content">
+            <div class="item-just-content">1</div>
+            <div class="item-just-content">item 2</div>
+            <div class="item-just-content">outro item</div>
+            <div class="item-just-content">4</div>
+            <div class="item-just-content">5</div>
+        </section>
+
+        <p>space-between</p>
+        <section class="container-just-content space-between-just-content">
+            <div class="item-just-content">1</div>
+            <div class="item-just-content">item 2</div>
+            <div class="item-just-content">outro item</div>
+            <div class="item-just-content">4</div>
+            <div class="item-just-content">5</div>
+        </section>
+
+        <p>space-around</p>
+        <section class="container-just-content space-around-just-content">
+            <div class="item-just-content">1</div>
+            <div class="item-just-content">item 2</div>
+            <div class="item-just-content">outro item</div>
+            <div class="item-just-content">4</div>
+            <div class="item-just-content">5</div>
+        </section>
+
+        <h2>column</h2>
+
+        <p>flex-start (column)</p>
+        <section class="container-just-content flex-start-just-content column-just-content">
+            <div class="item-just-content">1</div>
+            <div class="item-just-content">item 2</div>
+            <div class="item-just-content">outro item</div>
+            <div class="item-just-content">4</div>
+            <div class="item-just-content">5</div>
+        </section>
+
+        <p>flex-end (column)</p>
+        <section class="container-just-content flex-end-just-content column-just-content">
+            <div class="item-just-content">1</div>
+            <div class="item-just-content">item 2</div>
+            <div class="item-just-content">outro item</div>
+            <div class="item-just-content">4</div>
+            <div class="item-just-content">5</div>
+        </section>
+
+        <p>center</p>
+        <section class="container-just-content center-just-content column-just-content">
+            <div class="item-just-content">1</div>
+            <div class="item-just-content">item 2</div>
+            <div class="item-just-content">outro item</div>
+            <div class="item-just-content">4</div>
+            <div class="item-just-content">5</div>
+        </section>
+
+        <p>space-between</p>
+        <section class="container-just-content space-between-just-content column-just-content">
+            <div class="item-just-content">1</div>
+            <div class="item-just-content">item 2</div>
+            <div class="item-just-content">outro item</div>
+            <div class="item-just-content">4</div>
+            <div class="item-just-content">5</div>
+        </section>
+
+        <p>space-around</p>
+        <section class="container-just-content space-around-just-content column-just-content">
+            <div class="item-just-content">1</div>
+            <div class="item-just-content">item 2</div>
+            <div class="item-just-content">outro item</div>
+            <div class="item-just-content">4</div>
+            <div class="item-just-content">5</div>
+        </section>
+    </div>
+
+    <div class="divs">
+        <h1>Align-items</h1>
+        <h2>row</h2>
+        <p>center</p>
+        <section class="container-align-items center-align-items">
+            <div class="item-align-items">Item 1</div>
+            <div class="item-align-items">Lorem ipsum dolor sit amet</div>
+            <div class="item-align-items">Item 3 mais algum texto. Lipsum</div>
+        </section>
+
+        <p>stretch</p>
+        <section class="container-align-items stretch-align-items">
+            <div class="item-align-items">Item 1</div>
+            <div class="item-align-items">Lorem ipsum dolor sit amet.Lorem ipsum dolor sit ametLorem ipsum dolor sit
+                ametLorem ipsum dolor sit amet</div>
+            <div class="item-align-items">Item 3 mais algum texto. Lipsum</div>
+        </section>
+
+        <p>flex-start</p>
+        <section class="container-align-items start-align-items">
+            <div class="item-align-items">Item 1</div>
+            <div class="item-align-items">Lorem ipsum dolor sit amet</div>
+            <div class="item-align-items">Item 3 mais algum texto. Lipsum</div>
+        </section>
+
+        <p>flex-end</p>
+        <section class="container-align-items end-align-items">
+            <div class="item-align-items">Item 1</div>
+            <div class="item-align-items">Lorem ipsum dolor sit amet</div>
+            <div class="item-align-items">Item 3 mais algum texto. Lipsum</div>
+        </section>
+
+        <p>baseline</p>
+        <section class="container-align-items baseline-align-items">
+            <div class="item-align-items"><br>Item 1</div>
+            <div class="item-align-items">Lorem ipsum dolor sit amet</div>
+            <div class="item-align-items">Item 3 mais algum texto. Lipsum</div>
+        </section>
+
+        <h2>column</h2>
+        <p>flex-start</p>
+        <section class="container-align-items start-align-items column-align-items">
+            <div class="item-align-items">Item 1</div>
+            <div class="item-align-items">Lorem ipsum dolor sit amet</div>
+            <div class="item-align-items">Item 3 mais algum texto. Lipsum</div>
+        </section>
+
+        <p>flex-end</p>
+        <section class="container-align-items end-align-items column-align-items">
+            <div class="item-align-items">Item 1</div>
+            <div class="item-align-items">Lorem ipsum dolor sit amet</div>
+            <div class="item-align-items">Item 3 mais algum texto. Lipsum</div>
+        </section>
+
+        <p>center</p>
+        <section class="container-align-items center-align-items column-align-items">
+            <div class="item-align-items">Item 1</div>
+            <div class="item-align-items">Item 3 mais algum texto. Lipsum</div>
+            <div class="item-align-items">Lorem ipsum dolor sit amet</div>
+        </section>
+
+        <p>baseline</p>
+        <section class="container-align-items baseline-align-items column-align-items">
+            <div class="item-align-items"><br>Item 1</div>
+            <div class="item-align-items">Lorem ipsum dolor sit amet</div>
+            <div class="item-align-items">Item 3 mais algum texto. Lipsum</div>
+        </section>
+
+        <p>alinhamento central à tela</p>
+        <section class="container-align-items central-align-items center-align-items">
+            <div class="item-align-items"> Lorem Ipsum is therefore always free from repetition.</div>
+        </section>
+    </div>
+
+    <div class="divs">
+        <h1>Align-content</h1>
+        <p>stretch</p>
+        <div class="container-align-content stretch-align-content">
+            <div class="item-align-content">Lorem Ipsum is therefore always free from</div>
+            <div class="item-align-content">Lorem Ipsum is therefore</div>
+            <div class="item-align-content">Lorem Ipsum is therefore always free</div>
+            <div class="item-align-content">Lorem Ipsum is therefore always free from repetition, injected humour, or
+                non-characteristic words etc.</div>
+            <div class="item-align-content">Lorem Ipsum is therefore</div>
+            <div class="item-align-content">Lorem Ipsum is therefore</div>
+            <div class="item-align-content">Lorem Ipsum is therefore</div>
+        </div>
+
+        <p>center</p>
+        <div class="container-align-content center-align-content">
+            <div class="item-align-content">Lorem Ipsum is therefore always free from</div>
+            <div class="item-align-content">Lorem Ipsum is therefore</div>
+            <div class="item-align-content">Lorem Ipsum is therefore always free</div>
+            <div class="item-align-content">Lorem Ipsum is therefore from repetition, injected humour, or
+                non-characteristic</div>
+            <div class="item-align-content">Lorem Ipsum is therefore</div>
+            <div class="item-align-content">Lorem Ipsum is therefore</div>
+            <div class="item-align-content">Lorem Ipsum is therefore</div>
+        </div>
+
+
+        <p>flex-start</p>
+        <div class="container-align-content flex-start-align-content">
+            <div class="item-align-content">Lorem Ipsum is therefore always free from</div>
+            <div class="item-align-content">Lorem Ipsum is therefore</div>
+            <div class="item-align-content">Lorem Ipsum is therefore always free</div>
+            <div class="item-align-content">Lorem Ipsum is therefore</div>
+            <div class="item-align-content">Lorem Ipsum is therefore</div>
+            <div class="item-align-content">Lorem Ipsum is therefore</div>
+            <div class="item-align-content">Lorem Ipsum is therefore</div>
+        </div>
+
+        <p>flex-end</p>
+        <div class="container-align-content flex-end-align-content">
+            <div class="item-align-content">Lorem Ipsum is therefore always free from</div>
+            <div class="item-align-content">Lorem Ipsum is therefore</div>
+            <div class="item-align-content">Lorem Ipsum is therefore always free</div>
+            <div class="item-align-content">Lorem Ipsum is therefore</div>
+            <div class="item-align-content">Lorem Ipsum is therefore</div>
+            <div class="item-align-content">Lorem Ipsum is therefore</div>
+            <div class="item-align-content">Lorem Ipsum is therefore</div>
+        </div>
+
+        <p>space-around</p>
+        <div class="container-align-content space-around-align-content">
+            <div class="item-align-content">Lorem Ipsum is therefore always free from</div>
+            <div class="item-align-content">Lorem Ipsum is therefore</div>
+            <div class="item-align-content">Lorem Ipsum is therefore always free</div>
+            <div class="item-align-content">Lorem Ipsum is therefore</div>
+            <div class="item-align-content">Lorem Ipsum is therefore</div>
+            <div class="item-align-content">Lorem Ipsum is therefore</div>
+            <div class="item-align-content">Lorem Ipsum is therefore</div>
+        </div>
+
+    </div>
+
+    <div class="divs">
+        <h1>Flex-grow</h1>
+        <p>flex-grow:0</p>
+        <div class="flex-container-grow">
+            <div class="item-grow fg-0">A</div>
+            <div class="item-grow fg-0">B</div>
+            <div class="item-grow fg-0">C</div>
+            <div class="item-grow fg-0">D</div>
+        </div>
+
+        <p>flex-grow: 1</p>
+        <div class="flex-container-grow">
+            <div class="item-grow fg-1">A</div>
+            <div class="item-grow fg-1">B</div>
+            <div class="item-grow fg-1">C</div>
+            <div class="item-grow fg-1">D</div>
+        </div>
+
+        <p>flex-grow: alternados</p>
+        <div class="flex-container-grow">
+            <div class="item-grow fg-1">A</div>
+            <div class="item-grow fg-2">B</div>
+            <div class="item-grow fg-2">C</div>
+            <div class="item-grow fg-1">D</div>
+        </div>
+        <p>flex-grow: alternados</p>
+        <div class="flex-container-grow">
+            <div class="item-grow fg-2">AAAAAA</div>
+            <div class="item-grow fg-2">BBB</div>
+            <div class="item-grow fg-2">C</div>
+            <div class="item-grow fg-2">D</div>
+        </div>
+
+    </div>
+
+    <div class="divs">
+        <h1>Flex-basis</h1>
+        <p>auto</p>
+        <div class="flex-container-basis">
+            <div class="items-basis bauto fg-1">A</div>
+            <div class="items-basis bauto fg-1">BBB</div>
+            <div class="items-basis bauto fg-1">C</div>
+            <div class="items-basis bauto fg-2">DEF</div>
+        </div>
+
+        <p>0 (zero)</p>
+        <div class="flex-container-basis">
+            <div class="items-basis b-0 fg-1">AAAAAAAAA</div>
+            <div class="items-basis b-0 fg-1">BBB</div>
+            <div class="items-basis b-0 fg-1">C</div>
+            <div class="items-basis b-0 fg-1">DEF</div>
+        </div>
+
+        <p>basis + width</p>
+        <div class="flex-container-basis">
+            <div class="items-basis w100 fg-2">AA</div>
+            <div class="items-basis w100 fg-2">BBB</div>
+            <div class="items-basis w100 fg-2">CCC</div>
+            <div class="items-basis w100 fg-2">DEF</div>
+        </div>
+
+    </div>
+
+    <div class="divs">
+        <h1>Flex-shrink</h1>
+        <p>flex-shrink: 1</p>
+        <div class="flex-container-shrink">
+            <div class="item-shrink s-1 fg-1">A</div>
+            <div class="item-shrink s-1 fg-1">B</div>
+            <div class="item-shrink s-1 fg-1">C</div>
+            <div class="item-shrink s-1 fg-1">D</div>
+            <div class="item-shrink s-1 fg-1">E</div>
+        </div>
+        <div class="flex-container-shrink">
+            <div class="item-shrink s-1 fg-1">A</div>
+            <div class="item-shrink s-1 fg-1">The generated</div>
+            <div class="item-shrink s-1 fg-1">C</div>
+            <div class="item-shrink s-1 fg-1">D</div>
+        </div>
+
+        <p>flex-shrink: 0 / basis: 100px</p>
+        <div class="flex-container-shrink">
+            <div class="item-shrink s-0 fg-1">A</div>
+            <div class="item-shrink s-0 fg-1">The generated</div>
+            <div class="item-shrink s-0 fg-1">C generated</div>
+            <div class="item-shrink s-0 fg-1">C generated</div>
+            <div class="item-shrink s-0 fg-1">D</div>
+        </div>
+
+        <p>flex-shrink: mix / basis: 100px</p>
+        <div class="flex-container-shrink">
+            <div class="item-shrink s-1 fg-1">A</div>
+            <div class="item-shrink s-2 fg-1">The generated</div>
+            <div class="item-shrink s-2 fg-1">C</div>
+            <div class="item-shrink s-3 fg-1">D</div>
+        </div>
+    </div>
+
+    <div class="divs">
+        <h1>Flex</h1>
+        <p>flex: 1</p>
+        <div class="flex-container-flex">
+            <div class="item-flex flex-1">A</div>
+            <div class="item-flex flex-1">BBB</div>
+            <div class="item-flex flex-1">CC</div>
+            <div class="item-flex flex-1">D</div>
+            <div class="item-flex flex-1">EF</div>
+        </div>
+
+        <p>flex: mix</p>
+        <div class="flex-container-flex">
+            <div class="item-flex flex-1">A</div>
+            <div class="item-flex flex-2">BBB</div>
+            <div class="item-flex flex-2">CC</div>
+            <div class="item-flex flex-1">D</div>
+            <div class="item-flex flex-1">EF</div>
+        </div>
+
+        <p>width ignorado -> basis = 0</p>
+
+        <div class="flex-container-flex">
+            <div class="item-flex flex-1 largura">A</div>
+            <div class="item-flex flex-1 largura">BBB</div>
+            <div class="item-flex flex-1 largura">CC</div>
+            <div class="item-flex flex-1 largura">D</div>
+            <div class="item-flex flex-1 largura">EF</div>
+        </div>
+    </div>
+
+    <div class="divs">
+        <h1>Order</h1>
+        <h2>row</h2>
+        <p>order: 0</p>
+        <div class="flex-container" -order>
+            <div class="item-order">1</div>
+            <div class="item-order">2</div>
+            <div class="item-order">3</div>
+            <div class="item-order">4</div>
+            <div class="item-order">4n</div>
+            <div class="item-order">4m</div>
+        </div>
+
+        <p>order: diferentes</p>
+        <div class="flex-container-order">
+            <div class="item-order o3">1</div>
+            <div class="item-order o2">4</div>
+            <div class="item-order o3">4n</div>
+            <div class="item-order o1">4m</div>
+        </div>
+
+
+        <h2>column</h2>
+        <p>order: 0</p>
+        <div class="flex-container-order direction">
+            <div class="item-order">1</div>
+            <div class="item-order">2</div>
+            <div class="item-order">3</div>
+            <div class="item-order">4</div>
+            <div class="item-order">4n</div>
+            <div class="item-order">4m</div>
+        </div>
+
+        <p>order: diferentes</p>
+        <div class="flex-container-order direction">
+            <div class="item-order o3">7</div>
+            <div class="item-order o1">9</div>
+            <div class="item-order o3">1</div>
+            <div class="item-order o2">4</div>
+            <div class="item-order o3">4n</div>
+            <div class="item-order o1">4m</div>
+        </div>
+    </div>
+
+    <div class="divs">
+        <h1>Align-self</h1>
+        <h2>row</h2>
+        <section class="flex-container-self align-container">
+            <div class="item-self auto-self">AAA</div>
+            <div class="item-self auto-self">123</div>
+            <div class="item-self auto-self">Lorem Ipsum is therefore always free from repetition</div>
+            <div class="item-self auto-self">ITEM 4</div>
+        </section>
+
+        <section class="flex-container-self">
+            <div class="item-self center-self">AAA</div>
+            <div class="item-self start-self">123</div>
+            <div class="item-self stretch-self">Lorem Ipsum is therefore always free from repetition</div>
+            <div class="item-self end-self">ITEM 4</div>
+        </section>
+
+        <section class="flex-container-self">
+            <div class="item-self center-self">AAA</div>
+            <div class="item-self start-self">AAA</div>
+            <div class="item-self end-self">AAA</div>
+            <div class="item-self stretch-self">Lorem Ipsum is therefore always</div>
+        </section>
+
+        <h2>column</h2>
+
+        <section class="flex-container-self align-container direction-self">
+            <div class="item-self auto-self">AAA</div>
+            <div class="item-self auto-self">123</div>
+            <div class="item-self auto-self">Lorem Ipsum is therefore always free from repetition</div>
+            <div class="item-self auto-self">ITEM 4</div>
+        </section>
+
+        <section class="flex-container-self direction-self">
+            <div class="item-self center-self">AAA</div>
+            <div class="item-self start-self">123</div>
+            <div class="item-self stretch-self">Lorem Ipsum is therefore always free from repetition</div>
+            <div class="item-self end-self">ITEM 4</div>
+        </section>
+
+        <section class="flex-container-self direction-self">
+            <div class="item-self center-self">AAA</div>
+            <div class="item-self start-self">AAA</div>
+            <div class="item-self end-self">AAA</div>
+            <div class="item-self stretch-self">Lorem Ipsum is therefore always</div>
+        </section>
+    </div>
+</body>
+
+</html>

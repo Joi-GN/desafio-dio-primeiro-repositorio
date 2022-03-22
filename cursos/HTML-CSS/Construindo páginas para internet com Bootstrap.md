@@ -20,4 +20,4 @@ O texto entre < dt > e < /dt > ficam em negrito e recebem o termo a ser definido
 Exemplos: vueJS*, react*, angular, jQuery
 ![](https://blog.cronapp.io/wp-content/uploads/2020/05/framworks-post.jpg)
 
-- [Material de apoio](https://github.com/vinioo/bootstrap5-dio)
+- [Material de apoio - Repositório](https://github.com/vinioo/bootstrap5-dio)

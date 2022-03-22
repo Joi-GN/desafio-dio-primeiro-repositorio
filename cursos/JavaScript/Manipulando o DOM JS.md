@@ -7,6 +7,9 @@ Estrutura dos elementos dentro da janela;
 Com o HTML DOM, o JavaScript pode acessar e mudar elementos do documento HTML;  
 ![](https://www.w3schools.com/js/pic_htmltree.gif)
 
+- [Introdução ao DOM](https://developer.mozilla.org/pt-BR/docs/Web/API/Document_Object_Model/Introduction)
+- [JavaScript HTML DOM](https://www.w3schools.com/js/js_htmldom.asp)
+
 ### DOM VS BOM
 DOM é a árvore de dependências do HTML, enquanto o BOM é a árvore de dependências do Browser
 >#### BOM 
@@ -73,6 +76,5 @@ No arquivo js, cria um evento que vai ser acionado no momento em que o usuário 
 ></script>
 >```
 
+- [addEventListener()](https://developer.mozilla.org/pt-BR/docs/Web/API/EventTarget/addEventListener)
 
-- [JavaScript HTML DOM](https://www.w3schools.com/js/js_htmldom.asp)
-- [Introdução ao DOM](https://developer.mozilla.org/pt-BR/docs/Web/API/Document_Object_Model/Introduction)
