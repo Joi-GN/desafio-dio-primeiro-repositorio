@@ -7,3 +7,15 @@ function showDisplay(value){
     display.value+=value;
 }
 
+function clearAll(){
+    display.value = "";
+}
+
+function result(){
+    let x = eval(display.value);
+    display.value = x;
+
+    if(display.value == "undefined"){
+        display.value = "";
+    }
+}
