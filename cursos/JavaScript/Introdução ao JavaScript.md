@@ -10,9 +10,9 @@
 - Web, Mobile, Smartwatches, Games, IOT, APIs;
 - Também utilizada no back-end.
 
->### [Evoluções do JavaScript](https://medium.com/jaguaribetech/javascript-evolução-e-especificações-bb3c218e15e1)
->### [Glossário - JavaScript](https://developer.mozilla.org/pt-BR/docs/Glossary/JavaScript)
 >### [O que é JS?](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
+>### [Glossário - JavaScript](https://developer.mozilla.org/pt-BR/docs/Glossary/JavaScript)
+>### [Evoluções do JavaScript](https://medium.com/jaguaribetech/javascript-evolução-e-especificações-bb3c218e15e1)
 
 ## Declaração de variáveis
 Existem 3 modos:  
@@ -29,7 +29,19 @@ Define a limitação e visibilidade de um bloco de código.
 **Escopo global** – quando a variável é declarada fora de qualquer
 bloco, sua visibilidade fica disponível em todo o código.  
 **Escopo local** – quando a variável é declarada dentro de um bloco,
-sua visibilidade pode ficar disponível ou não.  
+sua visibilidade pode ficar disponível ou não. 
+
+```js
+//escopo global
+
+if{
+  //escopo de bloco
+}
+
+function fn(){
+  //escopo de função
+}
+```
 
 >**! Regra de Uso de Variáveis !** 
 >- Iniciar com letras, underscore _ ou cifrão $; Não iniciar com número;
@@ -61,7 +73,9 @@ A tipagem funciona como uma regra de uso de dados, quanto
 mais forte for a tipagem, mais obrigatório é a declaração do tipo de dado.  
 A tipagem em JavaScript é fraca, a declaração dos dados acontece de modo dinâmico, ou seja, antes de declarar um dado, não se especifica o tipo dele.  
 Para conferir o tipo de dado pode-se digitar:   
-**typeof "variavel"**   
+```js 
+typeof nomeDaVariavel;
+```
 dessa forma irá retornar qual o tipo de dado da variavel indicada.  
 
 >Tipos primitivos  
@@ -69,8 +83,8 @@ As variáveis em JavaScript podem guardar tipos de dados que
 chamamos de tipos primitivos;  
 ![](https://miro.medium.com/max/724/1*huFzN8Wj0AI3-i1wGrU_kQ.png)
 
-|String|Number|Boolean|Array|Objects|
-|-|-|-|-|-|
+|String|Number|Boolean|Array|Objects|Null|Undefined|Symbol|Function|
+|-|-|-|-|-|-|-|-|-|
 |Comumente utilizada para textos |Números decimais e inteiros|True or False|Lista iterável de elementos|Estrutura do tipo "chave e valor"|
 Valores declarados entre aspas ou crases|**Math.**||**nomeDoArray.**|**Objects.**|
 Iterabilidade, Formatação, Index de letras||||
@@ -82,66 +96,10 @@ Iterabilidade, Formatação, Index de letras||||
 - pop() – remove item no final do array;
 - shift() – remove item no início do array;
 - unshift() – add item no início do array;
--indexOf() – retorna o índice de um valor;
+- indexOf() – retorna o índice de um valor;
 - splice() – remove ou substitui um item pelo índice;
 - slice() – retorna uma parte de um array existente;
 - [Outros Métodos](https://www.w3schools.com/jsref/jsref_obj_array.asp)
-
-## Objetos
-Parecidos com arrays, porém ao invés de índices para acessar seus dados, nos objetos utilizamos as propriedades;   
-Deve ser declarado entre chaves “{}”;  
-É composto de vários membros, cada um  com um nome(key) e um valor(value). Cada par nome/valor deve ser separado por uma vírgula e o nome e valor, em cada caso, separados por dois pontos;  
-O valor pode ser uma string, um número, arrays, functions e etc;  
-Valores do tipo functions são chamadas de métodos do objeto, pois permitem que o objeto faça algo com os dados;  
-Os demais são data items e são chamadados de propriedades do objeto;  
-
-```js
-const cat = {
-  "name": "Whiskers", 
-  "legs": 4,
-  "tails": 1,
-  "enemies": ["Water", "Dogs"],
-  "greeting": function() {
-    console.log('Meow!');
-  }
-}; //name, legs, tails e enemies são propriedades. greeting é um método
-```
-
-- Acessando as propriedades dos objetos
->- Notação de ponto/dot notation (.)
->- Notação de colchetes/bracket notation []
-
-```js
-var nomeGato = cat.name; //notação de ponto; utilizado quando já se sabe o nome da propriedade que quer acessar;
-
-cat["enemies"]; //notação de colchetes; quando a propriedade tem espaço no nome deve-se utilizar notação de colchetes e aspas;
-```
-- Atualizando propriedades
-```js
-cat.name = "Flocos";
-```
-
-- Adicionando propriedades
-```js
-cat.color = "White";
-```
-
-- Deletando propriedades
-```js
-delete cat.color;
-```
-
-- Checando propriedades
-```js
-cat.hasOwnProperty("color"); //returns false
-cat.hasOwnProperty("name"); //returns true
-```
-
-### Object Destructuring
-Entre chaves {}, podemos filtrar apenas os dados que nos interessam em um objeto.
-
-- [Objetos em JS](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Working_with_Objects)
-- [Desestruturação de Obj](https://www.digitalocean.com/community/tutorials/understanding-destructuring-rest-parameters-and-spread-syntax-in-javascript-pt)
 
 ## Empty, null e undefined
 *empty*:  
@@ -173,24 +131,34 @@ console.log ("" === undefined); // false
 ## Estruturas de decisão
 >### if
 >Palavra reservada para estabelecer uma condição;  
-`if(condicao){declaracao}`
+```js
+if(condicao){declaracao}
+```
 
 >### else
 >Se a condição não for atendida;  
-`if(condicao){declaracao}else{declaracao se condicao for falsa}`
+```js
+if(condicao){declaracao}else{declaracao se condicao for falsa}
+```
 
 >### else if
 >Se houver mais uma condição;  
-`if(condicao1){declaracao1}else if(condicao2){declaracao2} else{declaracao se condicao 1 e 2 forem falsas}`
+```js
+if(condicao1){declaracao1}else if(condicao2){declaracao2} else{declaracao se condicao 1 e 2 forem falsas}
+```
 
 >### ninho de if
 >Quando se tem um "if" dentro de outro "if";  
 >Aninhamento de if's;   
-`if(){if(){else{}}}`
+```js
+if(){if(){else{}}}
+``` 
 
 >### if ternário
 >Verificação em uma única linha;  
-`[condição] ? [instrução1] : [instrução2];`
+```js
+[condição] ? [instrução1] : [instrução2];
+```
 
 >### Switch/Case
 >Equivale a uma comparação de tipo e valor (===);  
@@ -202,27 +170,93 @@ console.log ("" === undefined); // false
 > ### for
 >Loop dentro de elementos iteráveis (arrays,strings);  
 >Repetição de instrução até que a condição seja falsa.  
-```for([expresaoInicial];[condicao];[incremento]){declaracao}```
+```js
+for([expresaoInicial];[condicao];[incremento]){declaracao}
+
+const ourArray = [];
+
+for (let i = 0; i < 5; i++) {
+  ourArray.push(i);
+}
+
+for (let i = 0; i < 10; i += 2) {
+  ourArray.push(i);
+} //somente pares; incrementando de 2 em 2;
+
+for (let i = 10; i > 0; i -= 2) {
+  ourArray.push(i);
+}// [10, 8, 6, 4, 2];
+```
+- Em arrays multidimensionais/matriz
+```js
+const arr = [
+  [1, 2], [3, 4], [5, 6]
+];
+
+for (let i = 0; i < arr.length; i++) {
+  for (let j = 0; j < arr[i].length; j++) {
+    console.log(arr[i][j]);
+  }
+}
+
+//EXEMPLO
+//função que retorna o produto da multiplicação de todos os valores dos sub-arrays do array
+function multiplyAll(arr) {
+  let product = 1;
+
+  for(let i=0; i<arr.length;i++){
+    for(let j=0;j<arr[i].length;j++){
+      product *= arr[i][j];
+    }
+  }
+  return product;
+}
+
+multiplyAll([[1, 2], [3, 4], [5, 6, 7]]);
+```
 
 >### for/in
 >Loop entre propriedades enumeráveis de um objeto;  
 >Repetição a partir de uma propriedade.    
-```for([indice]in[objeto ou array]){declaracao}```
+```js
+for([indice]in[objeto ou array]){declaracao}
+```
 
 >### for/of
 >Loop entre estruturas iteráveis (arrays, strings);  
 >Não funciona com objetos;  
 >Repetição a partir de um valor.  
-```for([indice]of[array]){declaracao}```
+```js
+for([indice]of[array]){declaracao}
+```
 
 >### while
 >Executa instruções até que a condição se torne falsa;
 >A verificação é feita antes da execução.  
-```while(condicao){declaracao}```
+```js
+while(condicao){declaracao}
+
+const ourArray = [];
+let i = 0;
+
+while (i < 5) {
+  ourArray.push(i);
+  i++;
+}
+```
+
 >### do/while
 >Executa instruções até que a condição se torne falsa, *porém a primeira execução sempre ocorre*;
 >A verificação é feita depois da execução.  
-```do{declaracao}while(condicao)```
+```js
+do{declaracao}while(condicao)
+
+do{
+  myArray.push(i);
+  i++;
+}
+while (i < 5);
+```
 
 - [Material de apoio](https://github.com/stebsnusch/basecamp-javascript)
 - [Material de apoio](https://github.com/DianaMartine/curso-dio-sintaxe-basica-javascript)

@@ -120,3 +120,27 @@ const soma = function(num1,num2){
 const resultSoma = calc(soma,1,2);//callback da função soma
 console.log(resultSoma); //3
 ```
+
+## Recursividade/Recursion
+Uma função é dita recursiva quando dentro dela é feita uma ou mais chamadas a ela mesma;  
+
+- Substituindo Loops por funções recursivas:
+```js
+//Com loop
+ function multiply(arr, n) {
+    let product = 1;
+    for (let i = 0; i < n; i++) {
+      product *= arr[i];
+    }
+    return product;
+  }
+
+//Função recursiva
+function multiply(arr, n) {
+    if (n <= 0) {
+      return 1;
+    } else {
+      return multiply(arr, n - 1) * arr[n - 1];
+    }
+  } 
+```

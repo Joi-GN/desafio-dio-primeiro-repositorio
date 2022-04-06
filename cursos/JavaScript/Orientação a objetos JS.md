@@ -13,7 +13,8 @@ Os programas são "objetos" que possuem uma série de propriedades;
 - Abstração
 
 > ### Herança
-> Classes descendentes herdam características de suas classes ascendentes.
+> Classes descendentes herdam características de suas classes ascendentes;  
+> Baseada em protótipos.  
 
 > ### Polimorfismo
 > Classes mais complexas herdam métodos de classes mais abstratas e os executem à sua maneira.  
@@ -31,13 +32,17 @@ Os programas são "objetos" que possuem uma série de propriedades;
 Esqueleto de todos os objetos;
 O objeto Object.prototype está no topo da cadeia;  
 Todos os objetos JS herdam propriedades e métodos de um prototype;  
+>__proto__ => prototype => constructor 
+
 
 ### Cadeia de protótipos (prototype chain)
 ![](https://lh3.googleusercontent.com/Ie7W5tqMOWICPnqSRIBksRmmfr8NGJbZ4r93oUGN_u-JxnJcFhQB60bDZDxV0gd9HdQpjSwq8XIcj8rXJrR6ivzc-Z1jsI-wljf873uGJONSe47-PkV1oB0C33ZF11yKkpIzyBhPFz4ZSWIED1w-VloXoafyxR5Xv0VL7TgmgRo9psFF1sI9oknV1qbPWNgrrvDjVJSholHkuCp5Cdnvj2t7xCLaChPFKe6wg7PsIJ58-RS_kHTBpR98XQvsPWhWTB7MVD9K8o5cw508Hcjvfgbl6RIpHCfYNOAz9DpWYyV0ekJX6oAt6hlL34OLoizipotSe2eWwz8B3EEd7YIYzmjEJW9ZfOMEkCPVTjYOnuF-RUvShhqwvV-yAcAwF2Y5LTyzoQnTt6VbxNT5lB5kH_gX3czTcxDa-BblwR_nL55_y8KiMU7SlV58VN3CFY4VC5oU9eeL9HlEmWDR7sZmPHEHxbEzTYiQqseE0_out0AbwO5KmfEN4X1Zw6NHvSoDyh1f3sa7mpyZBzBIxK5pvcQFQtvcRGySzrJYDZYmdGaIl53LfUhgpojZDLZNFFREJupIPtXVkqKkBI-LhlbmW6wW_xDlFcca9SNVWyrFSmd4Fw5qoQBFC-NuaF1HIeYZ8Sn0rYJ4n-16w-ShYkyPU3u59A7VmtTO_MevLdaZQQ=w759-h364-no)
 
 ## Classes
+ES6;  
 Javascript não possui classes nativamente;   
 Syntatic sugar: uma sintaxe feita para facilitar a escrita;  
+Simplificação da herança de protótipos;    
 Todas as classes são objetos e a herança se dá por protótipos.
 
 ![](https://linuxhint.com/wp-content/uploads/2021/08/word-image-1.jpeg)
