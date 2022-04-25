@@ -83,12 +83,11 @@ As variáveis em JavaScript podem guardar tipos de dados que
 chamamos de tipos primitivos;  
 ![](https://miro.medium.com/max/724/1*huFzN8Wj0AI3-i1wGrU_kQ.png)
 
-|String|Number|Boolean|Array|Objects|Null|Undefined|Symbol|Function|
-|-|-|-|-|-|-|-|-|-|
-|Comumente utilizada para textos |Números decimais e inteiros|True or False|Lista iterável de elementos|Estrutura do tipo "chave e valor"|
-Valores declarados entre aspas ou crases|**Math.**||**nomeDoArray.**|**Objects.**|
-Iterabilidade, Formatação, Index de letras||||
-**nomeDaVariavel.**
+|String|Number|Boolean|Array|Objects|Null|Undefined|Symbol|
+|-|-|-|-|-|-|-|-|
+|Comumente utilizada para textos |Números decimais e inteiros|True or False|Lista iterável de elementos|Estrutura do tipo "chave e valor"|Ausência intencional de um valor|Variável que não teve um valor atribuido|Representa um identificador único oculto|
+Valores declarados entre aspas ou crases|**Math.**||||||ES6|
+Iterabilidade, Formatação, Index de letras|
 
 ## Manipulando Arrays
 - forEach() – itera um array;
@@ -99,7 +98,19 @@ Iterabilidade, Formatação, Index de letras||||
 - indexOf() – retorna o índice de um valor;
 - splice() – remove ou substitui um item pelo índice;
 - slice() – retorna uma parte de um array existente;
+- reverse() - inverte os itens de um array;  
+- toString() - retorna uma string com os valores do array separados por vírgulas;  
 - [Outros Métodos](https://www.w3schools.com/jsref/jsref_obj_array.asp)
+
+## Alguns Métodos
+**String**   
+length, split(), replace(), slice(), substr();  
+
+**Number**   
+toString(), toFixed(), parseFloat(), parseInt();  
+
+**Object**   
+Object.keys(myObject), values(), entries(), assign(), freeze(), seal();  
 
 ## Empty, null e undefined
 *empty*:  
@@ -157,7 +168,12 @@ if(){if(){else{}}}
 >### if ternário
 >Verificação em uma única linha;  
 ```js
-[condição] ? [instrução1] : [instrução2];
+(condição) ? instrução1 : instrução2;
+
+//Vários if ternários
+(condição1) ? instrução1 // if
+: (condição2) ? instrução2 // if else
+: instrução3 // else
 ```
 
 >### Switch/Case
